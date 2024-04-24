@@ -49,6 +49,9 @@ Here we have the command to create the kubernetes secret with the App ID, Instal
 We create or use an existing “Runner group” set in our Github settings. For the name we will use `arc-runner-set-01` and fill in the details to allow the listener application to authenticate to GitHub Actions service and establish an HTTPS long poll connection.
 
 ```shell
+INSTALLATION_NAME='arc-runner-set-01'
+NAMESPACE='arc-runners-01'
+GITHUB_CONFIG_URL='https://github.com/MyOrg'
 helm install "${INSTALLATION_NAME}" \
 	--namespace "${NAMESPACE}" \
 	--create-namespace \
